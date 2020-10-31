@@ -1,0 +1,49 @@
+//0. Упорядочены ли цифры в числе?
+Напишите функцию с именем ascendingOrDescendingOrder, которая принимает трехзначное положительное число num в качестве аргумента и возвращает:
+
+"ascending order", если цифры числа расположены в строго возрастающем порядке,
+"descending order", если цифры числа расположены в строго убывающем порядке,
+"no order", если цифры строго не упорядочены.
+function ascendingOrDescendingOrder(num){
+  let a = Math.trunc(num / 100);
+  let b = Math.trunc((num / 10) % 10);
+  let c = Math.trunc(num % 10);
+  return a < b &&  b < c  ? "ascending order" : (a > b &&  b > c) ? "descending order" : "no order";    }
+//1.	Какой координатной четверти принадлежит точка с координатами (x, y)?
+
+function identityPlane(x, y){
+if (x > 0 && y > 0) return "I";
+if (x < 0 && y > 0) return "II";
+if (x < 0 && y < 0) return "III";
+return "IV";
+//2.	Существует ли треугольник со сторонами a, b, c?
+
+function triangle(a, b, c){
+return (a + b) > c && (a+c)>b && (b+c)>a ?  "The triangle exists" : "The triangle does not exist"
+
+//3.	Является ли треугольник равносторонним?
+
+function triangle(a, b, c){
+return a === b && b === c ? "The triangle is right" : "The triangle is not right"
+//4.	Где находится точка с координатами (x, y)?
+
+function positionOfPoint(x, y){
+if (x === y && x === 0) return 0;
+if (x !== 0 && y === 0) return 1;
+if (x === 0 && y !== 0) return 2;
+return 3;
+5.	Описание числа
+
+function numberDescription(num){
+if (num % 2 === 0 && num > 0) return "positive even number";
+if (num % 2 === 0 && num < 0) return "negative even number";
+if (num % 2 !== 0 && num > 0) return "positive odd number";
+if (num % 2 !== 0 && num < 0) return "negative odd number";
+if (num  === 0) return  "zero number";
+//6.	Сколько цифр содержит число: 1, 2 или 3?
+
+function numberDescription(num){
+let l = String(Math.abs(num)).length;
+if (l === 1) return "one-digit number";
+if (l === 2) return "two-digit number";
+if (l === 3) return "three-digit number"
