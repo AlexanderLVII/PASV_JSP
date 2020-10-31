@@ -1,0 +1,45 @@
+//1.	Начинается ли хотя бы одно имя с буквы "A"?
+function nameStartsWithA(str1, str2, str3){
+if (str1[0] === "A" || str2[0] === "A" || str3[0] === "A") return "Yes";
+return "No";
+}
+
+//2.	Вставать на работу или можно еще немного поспать?
+function dayOfWeek(day){
+return day === 6 || day ===7 ? "You can get some sleep" : "Time to get up for work"
+
+//3.	Месяц покупки конфет
+function sweetSeason(month){
+return month === 2 || month === 10 || month === 12 ? "Time to buy sweets" : "Not the time to buy sweets"
+
+//4.	Цвета на флаге
+function flagColors(color){
+return color === 'red' || color === 'navy' || color === 'white' ? "This color is on the flag" : "This color is not on the flag"
+
+//5.	Время года
+function season(month){
+if (month >= 3 && month <= 5) return "Spring";
+if (month >= 6 && month <= 8) return "Summer";
+if (month >= 9 && month <= 11) return "Fall";
+if (month === 1 || month === 2 || month === 12) return "Winter";
+
+//6.	Семь цветов радуги
+
+function rainbowСolor(color){
+return color === 'red' || color === 'orange' || color === 'yellow' || color ===  'green' || color ===  'blue' || color === 'indigo' || color === 'violet' ? true:false;
+
+//7.	Есть ли хотя бы одно четное число в наборе?
+
+function atLeastOneEven(a, b, c){
+return a % 2 === 0 || b % 2 === 0 || c % 2 === 0 ? true:false
+8.	Есть ли хотя бы одно отрицательное число среди данных четырех чисел?
+
+function atLeastOneNegative(a, b, c, d){
+return a < 0 || b < 0 || c < 0 || d < 0 ? true:false
+//9.	Счастливые числа в Японии
+
+function luckyNumber(a, b){
+return a === 8 || a === 3 || a === 5 || a === 7 || b === 8 || b === 3 || b === 5 || b === 7 ? true:false
+10.	Пифагорова тройка
+function pythagoreanThree(a, b, c){
+return a**2+b**2===c**2 || a**2+c**2===b**2 || c**2+b**2===a**2 ? true:false
