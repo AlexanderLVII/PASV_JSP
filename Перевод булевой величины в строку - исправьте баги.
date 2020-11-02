@@ -1,0 +1,2 @@
+function boolToString(bool){
+  return bool ? "True" : "False"   }
