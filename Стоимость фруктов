@@ -1,0 +1,2 @@
+function saleFruits(n){
+return n < 3 ? n.toFixed(2) : n < 10 ?  (n * 0.8).toFixed(2) : (n * 0.6).toFixed(2)    }
