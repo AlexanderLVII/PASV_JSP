@@ -1,0 +1,2 @@
+function scoreIncrease(current, level){
+  return level === "easy"  ? current + 2 : level === "medium" ? current + 4 : current + 8  }
