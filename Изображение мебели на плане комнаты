@@ -1,0 +1,19 @@
+function digitToName(n){
+  switch(n){
+    case 1: return 'wardrobe';
+      break;
+    case 2: return  'table';
+      break;
+    case 3: return  'chair';
+      break;
+    case 4: return  'bed';
+      break;
+    case 5: return 'bookshelf';
+      break;
+    case 6: return 'exercise bike';
+      break;
+    case 7: return  'air-conditioner';
+      break;
+    default: return undefined;
+  }
+}
