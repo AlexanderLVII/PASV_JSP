@@ -1,0 +1,306 @@
+1.	Рабочие и выходные дни
+
+Напишите функцию с именем workdayOrWeekend, которая принимает число day в качестве аргумента (число от 1 до 7 - номер дня недели) и возвращает строку "Work day", если день недели 1, 2, 3, 4, 5 или "Weekend", если день недели 6, 7. Если аргументом является число, меньшее 1 или большее 7, функция должна вернуть строку "Wrong input".
+
+function workdayOrWeekend(day){
+switch(day){
+case 1:
+case 2:
+case 3:
+case 4:
+case 5:
+  return "Work day";
+  break;
+case 6:
+case 7:
+return "Weekend";
+break;
+default: return "Wrong input";
+}
+}
+
+2.	Правильные многоугольники
+Напишите функцию с именем polygonName, которая принимает целое число n в качестве аргумента (число от 3 до 10 - количество вершин многоугольника) и возвращает название многоугольника. Если аргументом является число, меньшее 3 или большее 10, функция должна вернуть значение undefined. В решении необходимо использовать оператор
+
+function polygonName(n){
+switch(n){
+case 3: return 'triangle';
+  break;
+case 4: return 'square';
+  break;
+case 5: return 'pentagon';
+  break;
+case 6: return 'hexagon';
+  break;
+case 7: return 'heptagon';
+  break;
+case 8: return 'octahedron';
+  break;
+case 9: return 'nonagon';
+  break;
+case 10: return 'decagon';
+  break;
+default: return undefined;
+}
+
+}
+
+3.	Изображение мебели на плане комнаты
+Напишите функцию с именем digitToName, которая в качестве аргумента принимает целое число от 1 до 7, обозначающее предмет мебели или оборудования, и возвращает строку, содержащую название этого предмета. Если аргументом является число, меньшее 1 или большее 7, функция должна вернуть undefined
+
+function digitToName(n){
+  switch(n){
+    case 1: return 'wardrobe';
+      break;
+    case 2: return  'table';
+      break;
+    case 3: return  'chair';
+      break;
+    case 4: return  'bed';
+      break;
+    case 5: return 'bookshelf';
+      break;
+    case 6: return 'exercise bike';
+      break;
+    case 7: return  'air-conditioner';
+      break;
+    default: return undefined;
+  }
+}
+4.	Числительные в английском языке
+Напишите функцию с именем digitToWords, которая в качестве аргумента принимает целое число от 0 до 12, и возвращает массив из двух слов, содержащий названия количественного и порядкового числительного.
+Если аргументом является число, меньшее 0 или большее 12, функция должна вернуть undefined
+
+function digitToWords(n){
+  switch(n){
+    case 0: return ['zero', 'zeroth'];
+      break;
+    case 1: return ['one', 'first'];
+      break;
+   case 2: return  ['two', 'second'];
+      break;
+    case 3: return  ['three', 'third'];
+      break;
+    case 4: return  ['four', 'fourth'  ];
+      break;
+    case 5: return ['five', 'fifth'  ];
+      break;
+    case 6: return ['six', 'sixth' ];
+      break;
+    case 7: return  ['seven', 'seventh' ];
+      break;
+    case 8: return  ['eight', 'eighth' ];
+      break;
+    case 9: return  ['nine', 'ninth' ];
+      break;
+    case 10: return  ['ten',  'tenth' ];
+      break;
+    case 11: return  ['eleven', 'eleventh'];
+      break;
+    case 12: return  ['twelve', 'twelfth'];
+      break;
+    default: return undefined;
+  }
+}
+
+
+5.	Приветствие на разных языках
+Напишите функцию с именем greetings, которая в качестве аргументов принимает имя человека name и язык language и возвращает приветствие типа "Hello name!" на указанном языке. Если аргументом является язык, не входящий в словарь, функция должна вернуть приветствие на английском языке.
+
+function greetings(name, language){
+  switch(language){
+    case 'German' : return 'Hallo ' + name + '!';
+      break;
+    case 'French': return 'Bonjour ' + name + '!';
+      break;
+    case 'Spanish': return  'Hola ' + name + '!';
+      break;
+    case 'Italian': return 'Saluto ' + name + '!';
+      break;
+    case 'Russian': return 'Привет ' + name + '!';
+      break;
+    case 'Czech': return 'Nazdar ' + name + '!';
+      break;
+    default: return 'Hello ' + name + '!';
+  }
+
+6.	Название дня недели
+dayOfWeek, которая принимает число day в качестве аргумента (число от 1 до 7 - номер дня недели) и возвращает название дня недели:
+1 - 'Monday', 2 - 'Tuesday', 3 - 'Wednesday', 4 - 'Thursday', 5 - 'Friday', 6 - 'Saturday', 7 - 'Sunday'.
+
+function dayOfWeek(day){
+  switch(day){
+    case 1: return 'Monday';
+      break;
+    case 2: return  'Tuesday';
+      break;
+    case 3: return   'Wednesday';
+      break;
+    case 4: return  'Thursday';
+      break;
+    case 5: return 'Friday';
+      break;
+    case 6: return 'Saturday';
+      break;
+    case 7: return  'Sunday';
+      break;
+    default: return "Wrong day";
+  }
+}
+
+7.	Экзаменационная отметка
+
+examinationMark, которая принимает значение mark (число от 1 до 5) в качестве аргумента (экзаменационная отметка) и возвращает соответствующее название отметки:
+1 - 'bad', 2 - 'unsatisfactory', 3 - 'mediocre', 4 - 'good', 5 - 'excellent'.
+
+function examinationMark(mark){
+  switch(mark){
+    case 1: return 'bad';
+      break;
+    case 2: return 'unsatisfactory';
+      break;
+    case 3: return 'mediocre';
+      break;
+    case 4: return 'good' ;
+      break;
+    case 5: return 'excellent';
+      break;
+     default: return "wrong data";
+  }
+}
+
+8.	Время года - найдите багги
+Требуется создать функцию с именем season, которая принимает число от 1 до 12 month в качестве аргумента (номер месяца) и возвращает соответствующее название времени года: 'Winter', 'Spring', 'Summer', 'Autumn'. Если аргументом является число, меньшее 1 или большее 12, функция должна вернуть строку "Wrong month".
+
+function season(month){
+  let res;
+  switch (month) {
+    case 12: 
+    case 1: 
+    case 2: res = 'Winter';
+        break;
+    case 3: 
+    case 4: 
+    case 5: res = 'Spring';
+        break;
+    case 6: 
+    case 7: 
+    case 8: res = 'Summer';
+        break;
+    case 9: 
+    case 10: 
+    case 11: res = 'Autumn';
+        break;
+    default: res = 'Wrong month';
+  }
+  return res;
+}
+
+9.	Количество дней в месяце.
+daysInMonth, которая принимает число от 1 до 12 month в качестве аргумента (номер месяца) и возвращает количество дней в этом месяце для невисокосного года.
+
+function daysInMonth(month){
+ let res;
+  switch (month) {
+    case 1: 
+    case 3: 
+    case 5: 
+    case 7: 
+    case 8: 
+    case 10: 
+    case 12: res = 31;
+        break;
+    case 2: res = 28;
+        break;
+    case 4: 
+    case 6: 
+    case 9: 
+    case 11: res = 30;
+        break;
+    default: res = 'Wrong month';
+  }
+  return res;
+}
+
+10.	Арифметические операции
+Напишите функцию с именем calculate, которая принимает два числа a и b и строку operation (знак арифметической операции) в качестве аргументов, выполняет данную операцию над числами и возвращает результат в виде строки, содержащей решение. Возможные знаки операций: '+', '-', '*', '/', '%'. Результат деления чисел округлить до ближайшего целого числа с помощью метода Math.round().
+function calculate(a, b, operation){
+switch(operation){
+     case '+': return `${a} ${operation} ${b} = ${Math.round(a + b)}`;
+       break;
+     case '-': return `${a} ${operation} ${b} = ${Math.round(a - b)}`;
+       break;
+     case '*': return `${a} ${operation} ${b} = ${Math.round(a * b)}`;
+       break;
+     case '%': return `${a} ${operation} ${b} = ${Math.round(a % b)}`;
+       break;
+     case '/': 
+       if (b === 0) return null;
+      else return `${a} ${operation} ${b} = ${Math.round(a / b)}`;
+       break;
+     default: return null
+ }
+}
+11.	Расстояние в метрах
+Дано целое число n (расстояние) и единица измерения этого расстояния ('km', 'm', 'dm', 'cm', 'mm'). Получить расстояние в метрах.
+
+function unitsOfLength(n, unit){
+  switch(unit){
+    case 'km': return n * 1000;
+      break;
+    case 'm': return n;
+      break;
+    case 'dm': return n / 10;
+      break;
+    case 'cm': return n / 100 ;
+      break;
+    case 'mm': return n / 1000;
+      break;
+     default: return "wrong data";
+  }
+}
+
+12.	Координаты Робота
+Известны начальные координаты Робота (x, y). Робот может двигаться в четырех направлениях: N - север, S - юг, W - запад, E - восток. При перемещении в определенном направлении из точки (x, y) соответствующая координата Робота изменяется на 1:
+при перемещении на север Робот оказывается в точке (x, y+1),
+при перемещении на юг Робот оказывается в точке (x, y-1),
+при перемещении на запад Робот оказывается в точке (x-1, y),
+при перемещении на восток Робот оказывается в точке (x+1 y).
+Напишите функцию с именем robot, которая принимает три аргумента: числа x, y (начальные координаты Робота) и строку direction, содержащую направление движения ('N', 'S', 'E', 'W') и возвращает новые координаты Робота в виде массива x, y.
+
+function robot(x, y, direction){
+  switch(direction){
+    case 'N': return [x, y + 1];
+      break;
+    case 'S': return [x, y - 1];
+      break;
+    case 'E': return [x + 1, y];
+      break;
+    case 'W': return [x - 1, y] ;
+      break;
+  }
+}
+
+13.	Какой это день недели?
+Дни недели пронумерованы так: 0 - 'Sunday', 1 - 'Monday', 2 - 'Tuesday', 3 - 'Wednesday', 4 - 'Thursday', 5 - 'Friday', 6 - 'Saturday'.
+Дано целое число k (от 1 до 365). Определите название дня недели для k-го дня года, если считать, что 1 января был понедельник.
+Напишите функцию с именем dayOfWeek, которая принимает число k в качестве аргумента (число от 1 до 365 - номер дня года) и возвращает название дня недели.
+
+function dayOfWeek(k){
+  let day = k % 7 ;
+  switch(day){
+    case 0: return 'Sunday';
+      break;
+    case 1: return 'Monday';
+      break;
+    case 2: return 'Tuesday';
+      break;
+    case 3: return 'Wednesday';
+      break;
+    case 4: return 'Thursday';
+      break;
+    case 5: return 'Friday';
+      break;
+    case 6: return 'Saturday';
+  }
+}
