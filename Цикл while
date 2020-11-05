@@ -1,0 +1,121 @@
+Понятие цикла. Цикл while
+
+1.	Найти частное и остаток от деления без использования операций деления и нахождения остатка
+
+Даны два положительных целых числа n и k. Используя только операции сложения и вычитания, найдите результат деления числа n на число k (частное), а также остаток от деления.
+
+function quotientAndRemainder(n, k){
+let quotient = 0;
+while (n >= k){
+quotient++;
+n = n - k; 
+}
+return [quotient, n];
+}
+
+2.	Является ли число степенью 3?
+
+function powerOf3(n){
+  let power = 3;
+  while (power < n){
+    power = power * 3;
+  }
+  return power === n || n === 1;
+}
+
+
+function powerOf3(n){  while (n > 1) {   n = n / 3;  } return n === 1; }
+
+3.	Найдите степень числа 2
+число n в качестве аргумента и возвращает число k, такое, что 2 в степени k равно n
+
+function powerOf2(n){
+  let k = n === 1 ? 0 : 1;
+  let p = 2;
+  while (p < n){
+    k++;
+    p = p * 2;
+  }
+  return k }
+
+
+4.	Сумма чисел от 1 до n.
+function sum(n){
+  let s = 0;
+  let i = 1;
+  while (i <= n){
+    s = s + i;
+    i++;
+  }
+  return s 
+}
+
+5.	Факториал числа
+function factorial(n){
+  let s = 1;
+  let i = 1;
+  while (i <= n){
+    s = s * i;
+    i++;
+  }
+  return s 
+}
+
+6.	Сумма нечетных чисел от 1 до n.
+function sumOfOdd(n){
+  let s = 0;
+  let i = 1;
+  while (i <= n){
+    s = i % 2 !== 0 ? s + i : s;
+    i++;
+  }
+  return s }
+
+7.	Произведение четных чисел от 1 до n.
+function multOfEven(n){
+  let s = 1;
+  let i = 2;
+  while (i <= n){
+    s = i % 2 === 0 ? s * i : s;
+    i = i + 2;
+  }
+  return s;
+}
+
+8.	Сумма цифр числа
+
+function sumOfDigits(n){
+  let sum = 0;
+  while(n != 0){
+    sum += n % 10;
+    n = (n - n % 10) / 10;
+  }
+  return sum;
+}
+9.	Сколько цифр содержит число?
+принимает неотрицательное число n (n>=0) в качестве аргумента и возвращает количество цифр этого числа
+
+function numberOfDigits(n){
+  let cnt = 0;
+  while(n != 0){
+    cnt++;
+    n = (n - n % 10) / 10;
+  }
+  return cnt;
+}
+
+
+
+10.	Ученик учит английские слова.
+
+englishWords, которая принимает в качестве аргумента неотрицательное число n (n>=0) (количество английских слов, которые хочет выучить ученик) и возвращает количество дней, которые необходимы для изучения n слов.
+
+function englishWords(n){
+  let days = 1;
+  let words = 5;
+  while(n > words){
+    words = words + (5 + 2 * days);
+    days++;
+  }
+  return days;
+}
