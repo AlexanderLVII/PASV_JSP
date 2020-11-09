@@ -1,0 +1,82 @@
+Прерывание циклов
+
+1.	Определите, есть ли в массиве отрицательный элемент.
+Напишите функцию с именем isNegativeInArray, которая принимает массив arr в качестве аргумента и возвращает true, если в массиве есть хотя бы один отрицательный элемент, и false в противном случае. 
+function isNegativeInArray(arr){
+  let out = false;
+  for (let i =0; i < arr.length; i++){
+      if (arr[i] < 0) {
+        out = true;
+        break;
+      } 
+  }  
+  return out;
+}
+2.	Найдите в массиве первый четный элемент и его индекс.
+которая принимает массив arr в качестве аргумента и возвращает первый четный элемент и его индекс в виде массива [element, index]. Если в массиве нет ни одного четного элемента, вернуть пустой массив []. 
+
+function firstEvenElement(arr){
+  let out = [];
+  for (let i =0; i < arr.length; i++){
+      if (arr[i] % 2 === 0) {
+        out.push(arr[i]);
+        out.push(i);
+        break;
+      } 
+  }  
+  return out;
+}
+
+3.	Определите, содержит ли массив заданное значение.
+
+function isElementIncluded(arr, x){
+let out = false;
+  for (let i =0; i < arr.length; i++){
+      if (arr[i]  === x) {
+        out = true;
+        break;
+      } 
+  }  
+  return out;
+}
+4.	Содержит ли строка данный символ?
+Напишите функцию с именем iSymbInString, которая принимает строку str и символ symb в качестве аргументов и возвращает true, если в строке встречается хотя бы один символ symb, и false в противном случае.
+
+function iSymbInString(str, symb){
+let out = false;
+  for (let i =0; i < str.length; i++){
+      if (str[i]  === symb) {
+        out = true;
+        break;
+      } 
+  }  
+  return out
+}
+
+5.	Получить массив из целых чисел от 1 до n, за исключением данного числа x.
+Напишите функцию с именем fillArray, которая принимает числа n (n >= 1) и x (1 <= x <= n) в качестве аргументов и возвращает массив из целых чисел от 1 до n включительно, за исключением числа x.
+
+function fillArray(n, x){
+let arr =[];
+for (let i = 1; i <= n; i++) {  
+  if (i === x) {                
+    continue;                    
+  }
+  arr.push(i);
+}
+  return arr;
+}
+
+6.	Получить массив из четных чисел от 2 до n, за исключением чисел, кратных 3.
+
+Напишите функцию с именем fillArray, которая принимает число n (n >= 2) в качестве аргумента и возвращает массив из четных чисел от 2 до n, за исключением чисел кратных 3.
+function fillArray(n){
+let arr =[];
+for (let i = 2; i <= n; i++) {  
+  if (i % 3 === 0) {                
+    continue;                    
+  }
+  if (i % 2 === 0) arr.push(i);
+}
+  return arr;
+}
