@@ -1,0 +1,4 @@
+function nearestPoint(a, b, c){
+  return Math.abs(a-b) < Math.abs(a-c) ? "b" : Math.abs(a-b) === Math.abs(a-c) ? "distances are equal" : "c";
+}
+
