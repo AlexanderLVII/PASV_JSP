@@ -1,0 +1,3 @@
+function nearestCafe(x, n, m){
+  return Math.abs(x-n) < Math.abs(x-m) ? "Nonstop" : "Merci";
+}
