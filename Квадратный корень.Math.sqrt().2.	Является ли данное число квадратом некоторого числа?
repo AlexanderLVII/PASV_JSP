@@ -1,0 +1,5 @@
+function isSquare(x){
+  return Math.sqrt(x) % 1 === 0 ? `${x} is square of ${Math.sqrt(x)}` : `${x} is not a square`;
+}
+
+
