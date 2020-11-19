@@ -1,0 +1,61 @@
+Math.random() – Случайное число
+1.	Случайное целое число от 0 до 9
+Напишите функцию с именем integerFrom0To9, которая возвращает случайное целое число от 0 до 9 включительно
+function integerFrom0To9(){
+  return Math.trunc(Math.random() * 10 );
+}
+2.	Случайное целое число от 0 до 10
+
+Напишите функцию с именем integerFrom0To10, которая возвращает случайное целое число от 0 до 10 включительно.
+function integerFrom0To10(){
+  return Math.ceil(Math.random() * 10 );
+}
+3.	Случайное целое число от 0 до 99
+Напишите функцию с именем integerFrom0To99, которая возвращает случайное целое число от 0 до 99 включительно.
+function integerFrom0To99(){
+    return Math.trunc(Math.random() * 100 );
+}
+
+4.	Случайное целое число от 0 до 100
+function integerFrom0To100(){
+  return Math.ceil(Math.random() * 100 );
+}
+
+5.	Случайное целое число от 1 до 10
+function integerFrom1To10(){
+    return Math.ceil(Math.random() * 10 );
+}
+
+6.	Случайное целое число от 1 до 100
+function integerFrom1To100(){
+   			Math.floor(Math.random() * 100) + 1);
+}
+
+7.	Случайное целое двухзначное число
+function integerFrom10To99(){
+  return Math.floor(Math.random() * 90) + 10;
+}
+
+8.	Случайное целое трехзначное число
+function integerFrom100To999(){
+    return Math.floor(Math.random() * 900) + 100;
+}
+
+9.	Случайное целое число от 0 до n
+function integerFrom0ToN(n){
+    return Math.ceil(Math.random() * n );
+}
+
+10.	Случайное целое число от min до max
+function integerFromMinToMax(min, max){
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); 
+}
+
+11.	Случайный номер телефона.
+function createPhoneNumber(){
+      return  '+1' + Math.floor(Math.random() * 1000000000) ;
+}
+
+
