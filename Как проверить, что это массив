@@ -1,0 +1,27 @@
+Как проверить, что это массив
+1.	Тип аргумента функции
+Напишите функцию typeOfArg, которая принимает величину value в качестве аргумента и возвращает тип величины value. При решении задачи используйте метод {}.toString.call().
+function typeOfArg(value){
+  return {}.toString.call(value)
+}
+
+2.	Является ли аргумент функции массивом?
+Напишите функцию isArgArray, которая принимает величину value в качестве аргумента и возвращает true, если value является массивом, и false - в обратном случае. При решении используйте метод Array.isArray().
+function isArgArray(value){
+  return Array.isArray(value)
+}
+
+3.	Является ли хотя бы один из двух аргументов функции массивом?
+Напишите функцию isArrayInArg, которая принимает две величины value1 и value2 в качестве аргументов и возвращает true, если хотя бы один из аргументов является массивом, и false - в противном случае.
+function isArrayInArg(value1, value2){
+  return Array.isArray(value1) || Array.isArray(value2);
+}
+
+4.	Содержит ли массив хотя бы один вложенный массив?
+Напишите функцию isArrayContainsArray, которая принимает массив arr в качестве аргумент и возвращает true, если хотя бы один из элементов массива является массивом, и false - в противном случае.
+function isArrayContainsArray(arr){
+  for (let el of arr) {
+         if (Array.isArray(el)) return true;
+    }   
+  return false;
+}
