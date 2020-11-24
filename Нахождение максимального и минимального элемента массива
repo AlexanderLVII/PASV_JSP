@@ -1,0 +1,154 @@
+//Нахождение максимального и минимального элемента массива
+//1.	Поменяйте местами максимальный и минимальный элементы массива
+//возвращает массив, в котором максимальный и минимальный элементы поменялись местами.
+function changeMaxAndMin(arr){
+  let min = arr[0], imi = 0;;
+  let max = arr[0], imx = 0;; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i] < min) {
+      min = arr[i];
+      imi = i;
+    }
+    if (arr[i] > max) {
+      max = arr[i];
+      imx = i;
+    }
+  }
+  arr[imi] = max;
+  arr[imx] = min;
+  return arr
+}
+
+
+//2.	Минимальный элемент массива
+function minInArray(arr){
+  let min = arr[0];
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i] < min) min = arr[i];
+  }
+  return min
+}
+
+//3.	Максимальный элемент массива
+function maxInArray(arr){
+  let max = arr[0]; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i] > max)  max = arr[i];
+  }	
+  return max
+}
+
+//4.	Самое длинное слово в массиве
+//возвращает слово максимальной длины.
+function theLongestWord(arr){
+  let max = arr[0].length, im = 0; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i].length > max) {
+     max = arr[i].length;
+     im = i;
+    } 
+  }
+  return arr[im]
+}
+
+//5.	Самое короткое и самое длинное слово в массиве
+function words(arr){
+  let max = arr[0].length, im = 0; 
+  let min = arr[0].length, ix = 0; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i].length > max) {
+     max = arr[i].length;
+     im = i;
+    } 
+    if (arr[i].length < min) {
+     min = arr[i].length;
+     ix = i;
+    } 
+  }
+  return [arr[ix], arr[im]]
+}
+
+//6.	Максимальный модуль элемента
+//возвращает элемент, который имеет максимальную абсоютную величину (модуль).
+function maxAbsValue(arr){
+  let max = Math.abs(arr[0]), imax = 0; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (Math.abs(arr[i]) > max) {
+     max = Math.abs(arr[i]);
+     imax = i;
+    }
+  }
+  return arr[imax]
+}
+
+//7.	Максимальный четный элемент массива
+function maxEven(arr){
+  let max  ; 
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] % 2 === 0){
+     max = arr[i];
+     break;
+    } 
+  }
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] % 2 === 0 && arr[i] > max)  max = arr[i];
+  }
+  return max
+}
+
+//8.	Минимальный нечетный элемент массива
+function minOdd(arr){
+  let min  ; 
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] % 2 !== 0){
+     min = arr[i];
+     break;
+    } 
+  }
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] % 2 !== 0 && arr[i] < min)  min = arr[i];
+  }
+  return min
+}
+
+//9.	Самая дорогая машина
+function mostExpensiveCar(arr){
+  let max = arr[0][1], imax = 0; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i][1] > max){
+      max = arr[i][1];
+      imax = i;
+    }
+  }
+  return arr[imax][0]
+}
+
+//10.	Кто собрал больше всего грибов?
+// возвращает имя ребенка, который собрал больше всего грибов, и количество собранных им грибов в виде строки: "Name: number"
+function largestNumberOfMushrooms(arr){
+  let max = arr[0][1], imax = 0; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i][1] > max){
+      max = arr[i][1];
+      imax = i;
+    }
+  }
+  return arr[imax][0] +': ' + arr[imax][1]
+}
+
+//11.	Самый холодный день месяца.
+//Напишите функцию theColdestDay, которая принимает массив arr, содержащий данные о температуре в апреле, и возвращает информацию о самом холодном дне апреля в виде строки:
+//"April 4 was the coldest day of the month: it was 10 degrees."
+function theColdestDay(arr){
+  let min = arr[0], imin = 0; 
+  for (let i = 1; i < arr.length; i++){ 
+    if (arr[i] <= min){
+      min = arr[i];
+      imin = i;
+    }
+  }
+  return "April " + (imin+1) +' was the coldest day of the month: it was ' + min + ' degrees.'
+}
+
+
+
