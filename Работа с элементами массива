@@ -1,0 +1,197 @@
+Работа с элементами массива
+1.	Количество положительных элементов массива
+Напишите функцию countPositive, которая принимает массив arr в качестве аргумента, и возвращает количество положительных элементов массива.
+function countPositive(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] > 0) cnt++;                         
+  }
+  return cnt
+}
+
+2.	Количество нулевых элементов массива
+Напишите функцию countZeros, которая принимает массив arr в качестве аргумента, и возвращает количество элементов массива, равных нулю.
+function countZeros(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] === 0) cnt++;                         
+  }
+  return cnt
+}
+
+3.	Количество четных элементов массива
+ и возвращает количество четных элементов массива
+function countEven(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] % 2 === 0) cnt++;                         
+  }
+  return cnt
+}
+
+4.	Количество четных положительных элементов массива
+возвращает количество четных положительных элементов массива.
+function countEvenPositive(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] % 2 === 0 && arr[i] > 0) cnt++;                         
+  }
+  return cnt
+}
+
+5.	Количество чисел в массиве
+возвращает количество элементов, имеющих тип "number".
+function countNumbers(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (typeof(arr[i]) === "number") cnt++;                         
+  }
+  return cnt
+}
+
+6.	Количество целых чисел в массиве
+возвращает количество элементов, являющихся целыми числами.
+function countIntegers(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (Number.isInteger(arr[i])) cnt++;                         
+  }
+  return cnt
+}
+
+7.	Количество элементов, являющихся квадратами целых чисел
+возвращает количество элементов, являющихся квадратами целых чисел.
+function counOfSquares(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (Number.isInteger(arr[i]) && Math.sqrt(arr[i]) % 1 === 0  ) cnt++;                         
+  }
+  return cnt
+}
+
+8.	Количество пар положительных элементов
+ возвращает количество пар соседних элементов, являющихся положительными числами.
+function counOfPositivePairs(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] > 0 && arr[i+1] > 0)  cnt++;                         
+  }
+  return cnt
+}
+
+9.	Количество пар элементов c разными знаками
+возвращает количество пар соседних элементов, которые имеют разные знаки.
+function countOppositeSignsPairs(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] * arr[i+1] < 0)  cnt++;                         
+  }
+  return cnt
+}
+
+10.	Количество троек элементов, упорядоченных строго по возрастанию
+возвращает количество троек соседних элементов, которые строго упорядочены по возрастанию.
+function numberOfOrderedTriples(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] < arr[i+1] && arr[i+1] < arr[i+2] )  cnt++;
+  }
+  return cnt
+}
+
+11.	Первый отрицательный элемент и его индекс
+ возвращает первый отрицательный элемент массива и его индекс (в виде массива [element, index]), или undefined, если массив не содержит отрицательных элементов.
+function firstNegative(arr){
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] < 0) return [arr[i], i];                         
+  }
+  return undefined
+}
+
+12.	Первый элемент, который больше своего соседа справа
+возвращает первый элемент массива, который больше своего соседа справа, или undefined, если массив упорядочен по возрастанию
+	function firstBigger(arr){
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] > arr[i+1]) return arr[i];                         
+  }
+  return undefined
+}
+
+13.	Последний четный элемент и его индекс
+возвращает последний четный элемент и его индекс в виде массива [element, index], или undefined, если массив не содержит четных элементов.
+function lastEvenElement(arr){
+  for(let i = arr.length-1; i >=0; i--){   
+    if (arr[i] % 2 === 0) return [arr[i],i];                         
+  }
+  return undefined
+}
+
+14.	Массив температур в градусах Фаренгейта
+Напишите функцию fahrenheit, которая принимает два целых числа t1 и t2 (t1 < t2 - начальное и конечное значение температур в градусах Цельсия), и возвращает массив температур по Фаренгейту для данного диапазона температур. Температуры в градусах Цельсия и градусах Фаренгейта связаны формулой: tf = tc * (9/5) + 32
+function fahrenheit(t1, t2){
+  let arr = [];
+  for(let i = t1; i <= t2; i++){   
+    arr.push(+(i*9/5 + 32).toFixed(1));
+  }
+  return arr
+}
+
+15.	Новые цены на товары
+Напишите функцию changeArray, которая принимает массив prices в качестве аргумента и возвращает массив, который хранит новые цены. Цены повысились вдвое.
+function changeArray(prices){
+   let arr = [];
+  for(let i = 0; i < prices.length; i++){   
+    arr.push( prices[i] * 2);
+  }
+  return arr
+}
+
+16.	Есть ли в массиве хотя бы один отрицательный элемент?
+возвращает true, если массив содержит хотя бы один отрицательный элемент, и false, в противном случае.
+function isNegativeInArray(arr){
+  for (let el of arr) {
+    if (el < 0) return true;
+  }
+  return false
+}
+
+17.	Есть ли в массиве хотя бы один нулевой элемент?
+возвращает true, если массив содержит хотя бы один нулевой элемент, и false, в противном случае.
+function isZeroInArray(arr){
+  for (let el of arr) {
+    if (el === 0) return true;
+  }
+  return false
+}
+18.	Есть ли в массиве хотя бы один элемент, равный сумме своих соседей 
+ если массив содержит хотя бы один элемент, равный сумме своих соседей слева и справа, находит первый такой элемент и возвращает строку вида:
+"true: it is <element>", где <element> - значение элемента.
+или false, в противном случае.
+function isElementInArray(arr){
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] === arr[i+1] + arr[i-1]) return "true: it is " + arr[i];                         
+  }
+  return false
+}
+
+
+19.	Количество слов длиной 5 символов
+возвращает количество имен длиной 5 символов
+function countOfWords(names){
+  let cnt = 0;
+  for (let el of names) {
+    if (el.length === 5) cnt++;
+  }
+  return cnt
+}
+
+20.	Одинаковые элементы в массиве
+определяет, есть ли в массиве одинаковые элементы, и если есть, возвращает их в виде массива [element, element]. Если таких пар несколько, вернуть первую из них. Если в массиве нет одинаковых элементов, вернуть сообщение "All elements are different". Если исходный массив пустой, вернуть пустой массив.
+function equalElementsInArray(arr){
+  if(arr.length === 0) return arr;
+  for(let i = 0; i < arr.length; i++){   
+    if (arr.includes(arr[i], i + 1)) return [arr[i],arr[i]];                         
+  }
+  return "All elements are different"
+}
+
