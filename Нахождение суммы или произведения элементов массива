@@ -1,0 +1,106 @@
+Нахождение суммы или произведения элементов массива
+1.	Сумма элементов массива
+возвращает сумму элементов массива. Используйте в решении цикл. 
+function sumOfElements(arr){
+  let sum = 0;                           
+  for (let i = 0; i < arr.length; i++){  
+    sum = sum + arr[i];                  
+  }
+return sum
+}
+
+
+2.	Произведение элементов массива
+возвращает произведение элементов массива.
+function productOfElements(arr){
+  let sum = arr.length > 0 ? 1 : 0;                           
+  for (let i = 0; i < arr.length; i++){  
+    sum = sum * arr[i];                  
+  }
+return sum
+}
+
+3.	Сумма четных положительных элементов массива
+возвращает сумму четных положительных элементов массива.
+function sumOfEvenPositive(arr){
+  let cnt = 0;   
+  for(let i = 0; i < arr.length; i++){   
+    if (arr[i] % 2 === 0 && arr[i] > 0) cnt +=arr[i];                         
+  }
+  return cnt
+}
+
+4.	Сумма квадратов элементов массива
+возвращает сумму квадратов элементов массива.
+function sumOfSquares(arr){
+  let sum = 0;                           
+  for (let i = 0; i < arr.length; i++){  
+    sum = sum + arr[i] ** 2;                  
+  }
+return sum
+}
+
+5.	Среднее арифметическое элементов массива
+ возвращает среднее арифметическое элементов массива. Результат округлите до двух десятичных знаков. 
+function average(arr){
+  let sum = 0;                           
+  for (let i = 0; i < arr.length; i++){  
+    sum +=arr[i];                  
+  }
+return +(sum / arr.length).toFixed(2);
+}
+
+
+6.	Квадрат суммы минус сумма квадратов
+возвращает разность квадрата суммы элементов и суммы квадратов элементов массива 
+function squares(arr){
+  let sum = 0; 
+  let sum2 = 0;                           
+  for (let i = 0; i < arr.length; i++){  
+    sum +=arr[i];                  
+    sum2 +=arr[i] ** 2;                  
+  }
+return sum ** 2 - sum2
+}
+
+7.	Количество забитых мячей
+принимает массив arr, хранящий данные о количестве голов, забитых каждым футболистом в разных играх, и возвращает общее количество голов, забитых футбольной командой.
+function sumOfGoals(arr){
+  let sum = 0; 
+  for (let el of arr){  
+      for (let i = 0; i < el.length; i++){  
+          sum +=el[i];
+      }
+  }
+return sum
+}
+
+8.	Сколько учеников имеют отметку выше средней?
+ возвращает количество учеников, у которых балл выше среднего. 
+function aboveAverageScore(arr){
+  let sum = 0; 
+  let cnt = 0;
+  for (let el of arr){  
+      sum +=el;
+  }
+  sum = sum / arr.length;
+  for (let el of arr){  
+    if (el > sum) cnt++
+  }
+return cnt
+}
+
+9.	Определите дату по номеру дня!
+Напишите функцию, которая поможет определить дату, если известен номер дня в году, а также то, каким является год - високосным или нет. Функция принимает номер дня day и булеву величину isLeap в качестве аргументов и возвращает дату года в виде строки "Month, day". Во всех тестах номер дня - число от 1 до 366.
+function getDay(day, isLeap){
+  let arrM = [31,28,31,30,31,30,31,31,30,31,30,31];
+  let arrD = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  if (isLeap) arrM[1] = 29; 
+  for (let i = 0; i < 12; i++){ 
+    day = day - arrM[i];
+    if (day <= 0){
+     day = day + arrM[i];
+     return arrD[i] + ", " + day
+    }
+  }
+}
