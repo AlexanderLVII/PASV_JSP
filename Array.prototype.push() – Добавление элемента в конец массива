@@ -1,0 +1,69 @@
+Array.prototype.push() – Добавление элемента в конец массива
+1.	Добавьте величину в конец массива
+добавляет величину value в конец массива и возвращает полученный массив.
+function addValue(arr, value){
+  arr.push(value);
+  return arr
+}
+
+2.	Новая длина массива
+добавляет величину value в конец массива и возвращает новую длину массива.
+function addValue(arr, value){
+  return arr.push(value);
+}
+
+3.	Получить массив из букв
+принимает массив строк names в качестве аргумента, и возвращает массив, содержащий первые буквы строк исходного массива.
+function arrayOfFirstLetters(names){
+  let outA = [];
+  for (let i = 0; i < names.length; i++){ 
+    outA.push( names[i][0]);
+  }
+  return outA
+}
+
+4.	Разделите массив на массив чисел и массив строк
+принимает смешанный массив arr в качестве аргумента, возвращает массив, содержащий массив чисел и массив строк в виде: [[array of numbers], [array of strings]]
+function separateNumsAndStrings(arr){
+  let arrN = [];
+  let arrS = [];
+  for (let i = 0; i < arr.length; i++){ 
+    if (typeof(arr[i]) === "number") arrN.push( arr[i]);
+    else arrS.push( arr[i]);
+  }
+  return [arrN, arrS]
+}
+
+5.	Разделите массив на два массива: массив положительных чисел и массив отрицательных чисел
+числовой массив arr в качестве аргумента, возвращает массив, содержащий массив положительных чисел и массив отрицательных чисел 
+function separatePosAndNeg(arr){
+  let arrN = [];
+  let arrS = [];
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] > 0) arrN.push( arr[i]);
+    else if (arr[i] < 0) arrS.push( arr[i]);
+  }
+  return [arrN, arrS]
+}
+
+6.	Разделите массив на два массива: массив четных чисел и массив нечетных чисел
+возвращает массив, содержащий массив четных чисел и массив нечетных чисел
+function separateEvenAndOdd(arr){
+  let arrN = [];
+  let arrS = [];
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] % 2 === 0) arrN.push( arr[i]);
+    else  arrS.push( arr[i]);
+  }
+  return [arrN, arrS]
+}
+
+7.	Разделите строку на отдельные буквы
+возвращает массив, содержащий буквы этой строки.
+function splitString(str){
+  let arr = [];
+  for (let i = 0; i < str.length; i++){ 
+    arr.push(str[i]);
+  }
+  return arr
+  }
