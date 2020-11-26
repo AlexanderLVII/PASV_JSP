@@ -1,0 +1,175 @@
+Array.prototype.push() – Добавление элемента в конец массива
+1.	Добавьте величину в конец массива
+добавляет величину value в конец массива и возвращает полученный массив.
+function addValue(arr, value){
+  arr.push(value);
+  return arr
+}
+
+2.	Новая длина массива
+добавляет величину value в конец массива и возвращает новую длину массива.
+function addValue(arr, value){
+  return arr.push(value);
+}
+
+3.	Получить массив из букв
+принимает массив строк names в качестве аргумента, и возвращает массив, содержащий первые буквы строк исходного массива.
+function arrayOfFirstLetters(names){
+  let outA = [];
+  for (let i = 0; i < names.length; i++){ 
+    outA.push( names[i][0]);
+  }
+  return outA
+}
+
+4.	Разделите массив на массив чисел и массив строк
+принимает смешанный массив arr в качестве аргумента, возвращает массив, содержащий массив чисел и массив строк в виде: [[array of numbers], [array of strings]]
+function separateNumsAndStrings(arr){
+  let arrN = [];
+  let arrS = [];
+  for (let i = 0; i < arr.length; i++){ 
+    if (typeof(arr[i]) === "number") arrN.push( arr[i]);
+    else arrS.push( arr[i]);
+  }
+  return [arrN, arrS]
+}
+
+5.	Разделите массив на два массива: массив положительных чисел и массив отрицательных чисел
+числовой массив arr в качестве аргумента, возвращает массив, содержащий массив положительных чисел и массив отрицательных чисел 
+function separatePosAndNeg(arr){
+  let arrN = [];
+  let arrS = [];
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] > 0) arrN.push( arr[i]);
+    else if (arr[i] < 0) arrS.push( arr[i]);
+  }
+  return [arrN, arrS]
+}
+
+6.	Разделите массив на два массива: массив четных чисел и массив нечетных чисел
+возвращает массив, содержащий массив четных чисел и массив нечетных чисел
+function separateEvenAndOdd(arr){
+  let arrN = [];
+  let arrS = [];
+  for (let i = 0; i < arr.length; i++){ 
+    if (arr[i] % 2 === 0) arrN.push( arr[i]);
+    else  arrS.push( arr[i]);
+  }
+  return [arrN, arrS]
+}
+
+7.	Разделите строку на отдельные буквы
+возвращает массив, содержащий буквы этой строки.
+function splitString(str){
+  let arr = [];
+  for (let i = 0; i < str.length; i++){ 
+    arr.push(str[i]);
+  }
+  return arr
+  }
+
+
+************* ***************** *************** * *********************** ***********
+Array.prototype.pop() – Удаление последнего элемента в массиве
+
+1.	Удалите последний элемент массива
+удаляет последний элемент массива и возвращает полученный массив.
+function deleteFromEnd(arr){
+  arr.pop();
+  return arr
+}
+
+2.	Удаление последнего элемента: новый массив и удаленный элемент
+удаляет последний элемент массива и возвращает полученный массив и удаленный элемент в виде массива [newArray, element]
+function deleteFromEnd(arr){
+  let el = arr.pop();
+  return [arr,el]
+
+}
+
+************* ***************** *************** * *********************** ***********
+Array.prototype.unshift() – Добавление элемента в начало массива
+1.	Массив из цифр числа
+принимает в качестве аргумента число n и возвращает массив его цифр.
+function arrayOfDigits(n){
+  let arr = [];
+  let str = n + '';
+  let i = str.length-1;
+  do{
+    arr.unshift(+str[i]);
+    i--;
+  }while(i >= 0);
+  return arr;
+}
+
+2.	Добавление величины в начало или конец массива
+принимает массив arr и величину value в качестве аргументов, добавляет величину value в конец массива, если value является числом, или в начало массива, если value является строкой, затем возвращает полученный массив.
+function addValue(arr, value){
+  if (typeof(value) === 'number') arr.push(value);
+  else arr.unshift(value);
+  return arr
+}
+
+************* ***************** *************** * *********************** ***********
+Array.prototype.shift() – Удаление первого элемента массива
+
+1.	Удалите первый элемент массива
+удаляет первый элемент массива и возвращает полученный массив.
+function deleteFirstElement(arr){
+  arr.shift();
+  return arr;
+}
+
+2.	Удалите пять элементов в начале массива
+ удаляет первые пять элементов массива и возвращает полученный массив.
+function deleteFiveElements(arr){
+  for (let i = 0; i < 5; i++) arr.shift();
+  return arr
+}
+
+3.	Удалите n первых элементов массива
+arr и целое число n в качестве аргументов, удаляет первые n элементов массива и возвращает полученный массив.
+function deleteNElements(arr, n){
+  for (let i = 0; i < n; i++) arr.shift();
+  return arr
+}
+
+4.	Удалите все нечисловые элементы в начале массива
+function deleteNotNumbers(arr){
+  let countNotNums = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (typeof(arr[i]) !== 'number')
+      countNotNums++;
+    else break;
+  }
+  for (let i = 0; i < countNotNums; i++)  arr.shift();
+  return arr
+}
+
+
+************* ***************** *************** * *********************** ***********
+Array.prototype.includes() – Содержит ли массив искомый элемент
+1.	Есть ли хоть один нулевой элемент в массиве?
+ возвращает true, если массив содержит хотя бы один элемент равный 0, и false - в противном случае.
+function includeZero(arr){
+  return arr.includes(0)
+}
+
+2.	Содержит ли массив элемент, который на единицу больше минимального элемента данного массива?
+возвращает true, если массив содержит элемент, который на единицу больше минимального элемента, и false
+function includeGreaterThanMin(arr){
+  return arr.includes(Math.min(...arr) + 1)
+}
+
+3.	Содержит ли массив букв первую букву заданного слова?
+массив букв arr и слово word в качестве аргументов, и возвращает true, если массив содержит первую букву данного слова, и false - в противном случае.
+function includesFirstLetter(arr, word){
+  return arr.includes(word[0])
+}
+
+
+4.	Содержит ли первый массив максимальный элемент второго массива?
+ возвращает true, если массив arr1 содержит максимальный элемент массива arr2, и false - в противном случае.
+function includesOtherMax(arr1, arr2){
+  return arr1.includes(Math.max(...arr2))
+}
